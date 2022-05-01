@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+  <input type="text" name="model" id="model" formControlName="model">
+  <input type="text" formControlName="serialNumber">
+
+  {{ form.valid }}
+ 
+  <p *ngIf="form.get('serialNumber').hasError('isValid')">TESTESTES</p>
+
+  <button type="button" (click)="testForm()">Test</button>
+</form>
